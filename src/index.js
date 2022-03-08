@@ -1,17 +1,14 @@
+// Importing react functionality.
 import React from 'react';
+// Importing the react-dom functionality to complement react. 
 import ReactDOM from 'react-dom';
-import './index.css';
+// Importing the App.js component.
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+// Implementing the contents of the App.js component.
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

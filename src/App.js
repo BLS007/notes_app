@@ -1,23 +1,12 @@
-import logo from './logo.svg';
+// Importing the App.css and the NoteList.js component.
 import './App.css';
+import NoteList from './Components/NoteList';
 
+// Making the call to implement the contents of the NoteList.js component. 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="notes-app">
+      <NoteList />
     </div>
   );
 }

@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+/* Styling effects for the whole page. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styling effects for the background of the webpage. */
+body {
+  background: linear-gradient(
+    90deg,
+    rgb(226, 34, 34) 0%,
+    rgb(55, 77, 238) 100%
+  );
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Styling effects for the form on the page. */
+.notes-app {
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  width: 1000px;
+  min-height: 600px;
+  background: #000000;
+  text-align: center;
+  margin: 70px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+/* Styling effects for the "Notes App" title. */
+h1 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 30px;
+}
+
+/* Styling effects for the two paragraphs above the text box and below the "Notes App" title. */
+p {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 15px;
+}
+
+/* By clicking on the submitted entry it will classify it being completed. You can also click it again to bring it back to original spec. */
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+/* Styling effects for the text box that creates the notes. */
+.note-form {
+  margin-bottom: 30px;
+}
+
+/* Additional styling effects for the text box that creates the notes. */
+.note-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid rgb(226, 34, 34);
+  outline: none;
+  width: 800px;
+  background: transparent;
+  color: #fff;
+}
+
+/* Additional styling effects for the text box that creates the notes. */
+.note-input::placeholder {
+  color: #fff;
+}
+
+/* Styling effects for the "Add" button. */
+.note-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgb(226, 34, 34) 40%,
+    rgb(55, 77, 238) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+/* Styling for the text box when the created note needs to be edited. */
+.note-input.edit {
+  border: 2px solid rgb(226, 34, 34);
+  width: 800px;
+}
+
+/* Additional styling for the text box when the created note needs to be edited. */
+.note-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgb(226, 34, 34) 40%,
+    rgb(55, 77, 238) 100%
+  );
+  padding: 16px 22px;
+}
+
+/* Assigns each entry to a stackable row. */
+.note-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+/* After every four entries, the colors will reset. */
+.note-row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgb(26, 25, 25) 40%,
+    rgb(97, 97, 97) 100%
+  );
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
 }
 
-.App-link {
-  color: #61dafb;
+/* After every four entries, the colors will reset. */
+.note-row:nth-child(4n + 1) {
+  background: linear-gradient(
+    90deg,
+    rgb(194, 126, 0) 40%,
+    rgb(0, 250, 12) 100%
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* After every four entries, the colors will reset. */
+.note-row:nth-child(4n + 2) {
+  background: linear-gradient(
+    90deg,
+    rgb(65, 12, 255) 40%,
+    rgb(26, 25, 25) 100%
+  );
+}
+
+/* After every four entries, the colors will reset. */
+.note-row:nth-child(4n + 3) {
+  background: linear-gradient(
+    90deg,
+    rgb(253, 0, 0) 40%,
+    rgb(26, 25, 25) 100%
+  );
+}
+
+/* Styling for the edit and delete icons. */
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Additional styling for the delete icon. */
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+/* Additional styling for the edit icon. */
+.edit-icon {
+  color: #fff;
 }
