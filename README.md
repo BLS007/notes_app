@@ -1,3 +1,10 @@
+# Notes App
+## A single webpage using REACT that allows you to add as many notes as you would like. You can add, edit, delete, and also click on a note to mark it as finished.
+
+### Home Page
+
+![home_page_image](https://user-images.githubusercontent.com/91220294/157282731-e6e1767f-ffbb-41d2-92b7-cc9a66069981.PNG)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
