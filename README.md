@@ -1,5 +1,5 @@
 # Notes App
-## A single webpage using REACT that allows you to add as many notes as you would like. You can add, edit, delete, and also click on a note to mark it as finished.
+## A single webpage (using React.js & CSS) where customers can add, edit and delete as many notes as they wish. 
 
 ### Home Page
 
